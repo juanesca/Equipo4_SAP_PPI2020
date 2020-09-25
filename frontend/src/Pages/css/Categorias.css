@@ -1,0 +1,60 @@
+#header{
+    display: flex; 
+    justify-content: space-between;   
+    width: calc(100% - 22px);
+    background-color: white;
+    border: black 1px solid;
+    box-shadow: 2px 2px 10px black;
+    margin: 10px;
+}
+#menu{
+    background-image: url(https://www.samueldiosdado.com/wp-content/uploads/2017/08/Men%C3%BA-hamburguesa-herramienta-practica-o-icono-inutil.png);
+    background-size:100% 100%;
+    background-position-y:center;
+    background-position-x:center;
+    width: 10vw;
+    height: 10vw;
+    margin: 10px;
+    max-width: 10vh;   
+    max-height: 10vh; 
+    cursor: pointer;
+}
+
+#perfil{
+    margin-right: 5px;
+    display:flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-left: 1px black solid;
+    width: 25vw;
+    height: calc(10vw + 22px);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/1200px-User_font_awesome.svg.png);
+    background-size: 10vw 10vw;    
+    background-position-y:center;
+    background-position-x: 10px;
+    background-repeat: no-repeat;
+}
+#contenedor{
+    display:flex;
+    flex-flow: column;
+    align-items: center;
+    font-weight: bold;
+    background-image: url(https://1.bp.blogspot.com/-In-d_Hj1GGI/X2ETbzxbIfI/AAAAAAAAPRc/pERQOkUIurM9_x8eKvSwD_SjemdW4PccQCLcBGAsYHQ/s16000/lunch-break.jpg);
+    background-size:100% 100%;
+    background-position-y:center;
+    background-position-x:center;
+    width: 100%;
+    min-height: 100vh;
+}
+.buscador{
+    width:80vw;
+    height: 30px;
+    background-image: url(https://image.flaticon.com/icons/png/512/25/25313.png);
+    background-size: 16px 16px;    
+    background-position-y:center;
+    background-position-x: calc(80vw - 22px);
+    background-repeat: no-repeat;
+}
+#title{
+    align-self: center;
+}
