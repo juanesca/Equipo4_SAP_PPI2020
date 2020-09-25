@@ -48,9 +48,9 @@ function Perfil(props) {
         <figure className="justify-content-center" id="btn-abrir-popup0">
           <div className="d-flex rounded-circle justify-content-center">
             <img
-              src={require(/*stateImage !== undefined && stateImage !== null
+              src={require(stateImage !== undefined && stateImage !== null
                 ? stateImage
-                : */"../images/perfil.PNG")}
+                : "../images/perfil.PNG")}
               alt="Perfil"
               className="rounded-circle btn-abrir-popup"
               type="button"
