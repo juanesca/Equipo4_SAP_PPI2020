@@ -1,8 +1,8 @@
 import React from "react";
 
-import { data } from "../utils/mock/dataMasComprados";
+import { data } from "../utils/mock/dataFavoritos";
 
-export default function MasComprados(props) {
+export default function Favoritos(props) {
   return (
     <>
       <div id="global" className="w-100">
@@ -11,7 +11,6 @@ export default function MasComprados(props) {
             return (
               <figure key={`item-${index}`}>
                 <img src={item.src} alt="" />
-                <figcaption className="bg-success">{item.veces}</figcaption>
               </figure>
             );
           })}

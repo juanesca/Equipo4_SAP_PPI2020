@@ -63,7 +63,7 @@ export default function Login() {
 }*/
 import React from "react";
 
-import { withRouter } from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 
 function Login(props) {
   const { history } = props;
@@ -75,14 +75,16 @@ function Login(props) {
       <div className="container">
         <form className="form col-12 col-md-6">
           <div className="boton">
-            <button 
-            onClick={() => history.push('/Perfil')}
-            type="button" className="btn btn-primary btn-medium btn-block">
+            <button
+              onClick={() => history.push("/Perfil")}
+              type="button"
+              className="btn btn-primary btn-medium btn-block"
+            >
               Perfil de usuario
             </button>
           </div>
           <div className="form-group">
-            <label for="exampleDropdownFormEmail2">Usuario</label>
+            <label htmlFor="exampleDropdownFormEmail2">Usuario</label>
             <input
               type="email"
               className="form-control"
@@ -92,7 +94,7 @@ function Login(props) {
           </div>
 
           <div className="form-group">
-            <label for="exampleDropdownFormPassword2">Contraseña</label>
+            <label htmlFor="exampleDropdownFormPassword2">Contraseña</label>
             <input
               type="password"
               className="form-control"
@@ -104,7 +106,11 @@ function Login(props) {
           <button type="submit" className="btn btn-primary">
             CONTINUAR
           </button>
-          <button onClick={()=> history.push('/Facebook-login')} type="submit" className="btn btn-primary">
+          <button
+            onClick={() => history.push("/Facebook-login")}
+            type="submit"
+            className="btn btn-primary"
+          >
             Facebook
           </button>
         </form>

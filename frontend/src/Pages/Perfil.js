@@ -6,7 +6,9 @@ import "../images/perfil.PNG";
 
 import Header from "../Components/Header";
 import Recibos from "../Components/Recibos";
-import MComprados from '../Components/MasComprados';
+import MComprados from "../Components/MasComprados";
+import Favs from "../Components/Favoritos";
+import Cupones from "../Components/Cupones";
 
 function Perfil(props) {
   const { history } = props;
@@ -48,9 +50,9 @@ function Perfil(props) {
         <figure className="justify-content-center" id="btn-abrir-popup0">
           <div className="d-flex rounded-circle justify-content-center">
             <img
-              src={require(/*stateImage !== undefined && stateImage !== null
+              src={require(stateImage !== undefined && stateImage !== null
                 ? stateImage
-                : */"../images/perfil.PNG")}
+                : "../images/perfil.PNG")}
               alt="Perfil"
               className="rounded-circle btn-abrir-popup"
               type="button"
@@ -67,6 +69,8 @@ function Perfil(props) {
         </figure>
         <button
           type="button"
+          id="btn-abrir-popup5"
+          onClick={() => pup(5)}
           //onClick={() => history.push("/Favoritos")}
           className="btn btn-white border border-black btn-lg w-75 d-flex text-center mx-auto my-1 justify-content-center"
         >
@@ -92,6 +96,8 @@ function Perfil(props) {
         </button>
         <button
           type="button"
+          id="btn-abrir-popup6"
+          onClick={() => pup(6)}
           //onClick={() => history.push("/Cupones")}
           className="btn btn-white border border-black btn-lg w-75 d-flex text-center mx-auto my-1 justify-content-center"
         >
@@ -117,7 +123,7 @@ function Perfil(props) {
         </button>
         <button
           type="button"
-          onClick={()=> history.push('/Login')}
+          onClick={() => history.push("/Login")}
           className="btn btn-danger btn-lg w-75 d-flex text-center mx-auto mb-4 justify-content-center"
         >
           CERRAR SESION
@@ -132,7 +138,7 @@ function Perfil(props) {
       </div>
 
       <div className="overlay" id="overlay0">
-        <div className="popup" id="popup0">
+        <div className="popup mx-4" id="popup0">
           <button id="btn-cerrar-popup0" className="btn-cerrar-popup">
             <i className="fas fa-times"></i>
           </button>
@@ -203,7 +209,7 @@ function Perfil(props) {
       </div>
 
       <div className="overlay" id="overlay1">
-        <div className="popup" id="popup1">
+        <div className="popup mx-4" id="popup1">
           <button href="#" id="btn-cerrar-popup1" className="btn-cerrar-popup">
             <i className="fas fa-times"></i>
           </button>
@@ -218,7 +224,7 @@ function Perfil(props) {
       </div>
 
       <div className="overlay" id="overlay2">
-        <div className="popup" id="popup2">
+        <div className="popup mx-4" id="popup2">
           <button href="#" id="btn-cerrar-popup2" className="btn-cerrar-popup">
             <i className="fas fa-times"></i>
           </button>
@@ -234,7 +240,7 @@ function Perfil(props) {
       </div>
 
       <div className="overlay" id="overlay3">
-        <div className="popup" id="popup3">
+        <div className="popup mx-4" id="popup3">
           <button href="#" id="btn-cerrar-popup3" className="btn-cerrar-popup">
             <i className="fas fa-times"></i>
           </button>
@@ -246,13 +252,37 @@ function Perfil(props) {
       </div>
 
       <div className="overlay" id="overlay4">
-        <div className="popup" id="popup4">
+        <div className="popup mx-4" id="popup4">
           <button href="#" id="btn-cerrar-popup4" className="btn-cerrar-popup">
             <i className="fas fa-times"></i>
           </button>
           <h3>Mas Comprados</h3>
           <form action="">
             <MComprados />
+          </form>
+        </div>
+      </div>
+
+      <div className="overlay" id="overlay5">
+        <div className="popup mx-4" id="popup5">
+          <button href="#" id="btn-cerrar-popup5" className="btn-cerrar-popup">
+            <i className="fas fa-times"></i>
+          </button>
+          <h3>Favoritos</h3>
+          <form action="">
+            <Favs />
+          </form>
+        </div>
+      </div>
+
+      <div className="overlay" id="overlay6">
+        <div className="popup mx-4" id="popup6">
+          <button href="#" id="btn-cerrar-popup6" className="btn-cerrar-popup">
+            <i className="fas fa-times"></i>
+          </button>
+          <h3>Cupones</h3>
+          <form action="">
+            <Cupones />
           </form>
         </div>
       </div>
