@@ -6,6 +6,7 @@ import Inicio from "./Inicio";
 import TiendaFood from './TiendaComidas';
 import Categorias from './Categorias';
 import DatPizza from '../Components/DatosProducto';
+import FnCompra from '../Components/FnCompra'
 
 import "../App.css";
 
@@ -19,6 +20,7 @@ export default function App() {
             <button>Inicio</button>
           </Link>
         <Switch>
+          <Route path="/Fin-compra" component={FnCompra} />
           <Route path="/Inicio" component={Inicio} />
           <Route path="/Login" component={Login} />
           <Route path="/Facebook-login" component={Facebook} />
