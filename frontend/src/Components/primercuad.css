@@ -1,0 +1,10 @@
+.card {
+    display: inline-block !important;
+    margin-top: 2%;
+    width: 18rem;  
+    align-content: center;
+
+  }
+  .card-align{
+      text-align: center;
+  }
