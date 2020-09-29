@@ -6,7 +6,7 @@ import { data } from "../utils/mock/dataRecibo";
 export default function Recibos(props) {
   return (
     <>
-      <div id="global" className="w-100">
+      <div id="global" className="w-100 contenedor-inputs">
         <div
           id="contenido"
           className="d-flex flex-wrap-reverse justify-content-around"

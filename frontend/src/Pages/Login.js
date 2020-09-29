@@ -74,7 +74,7 @@ function Login(props) {
 
       <div className="container">
         <form className="form col-12 col-md-6">
-          <div className="boton">
+          <div className="btn">
             <button
               onClick={() => history.push("/Perfil")}
               type="button"

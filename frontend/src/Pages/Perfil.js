@@ -12,7 +12,7 @@ import Cupones from "../Components/Cupones";
 
 function Perfil(props) {
   const { history } = props;
-  const [stateImage, setStateImage] = useState("../images/perfil.PNG");
+  var [stateImage, setStateImage] = useState(null);
 
   function perfil() {
     document.querySelectorAll("img").forEach(function (el) {
@@ -50,9 +50,9 @@ function Perfil(props) {
         <figure className="justify-content-center" id="btn-abrir-popup0">
           <div className="d-flex rounded-circle justify-content-center">
             <img
-              src={require(stateImage !== undefined && stateImage !== null
+              src={require(/*stateImage !== undefined && stateImage !== null
                 ? stateImage
-                : "../images/perfil.PNG")}
+                : */"../images/perfil.PNG")}
               alt="Perfil"
               className="rounded-circle btn-abrir-popup"
               type="button"
@@ -144,7 +144,7 @@ function Perfil(props) {
           </button>
           <h3>Elige una imagen</h3>
           <form>
-            <div className="justify-content-center ">
+            <div className="justify-content-center contenedor-inputs">
               <div className="d-flex flex-row justify-content-center">
                 <img
                   src={require("../images/perfil1.PNG")}

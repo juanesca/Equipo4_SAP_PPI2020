@@ -5,7 +5,7 @@ import { data } from "../utils/mock/dataMasComprados";
 export default function MasComprados(props) {
   return (
     <>
-      <div id="global" className="w-100">
+      <div id="global" className="w-100 contenedor-inputs">
         <div id="contenido" className="d-flex flex-wrap justify-content-around">
           {data.map((item, index) => {
             return (
