@@ -1,0 +1,23 @@
+.w-70 {
+    width: 70%;
+  }
+  .w-30 {
+    width: 30%;
+  }
+  .card{
+    display: inline-block !important;
+    margin: 2%;
+    width: 18rem;  
+    text-align: center;
+  
+    
+    
+  }
+  .card-align{
+   text-align: center;
+    
+  }
+  .btn{
+    margin-bottom: 1px;
+  
+  }
