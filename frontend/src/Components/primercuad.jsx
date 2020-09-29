@@ -31,9 +31,7 @@ function primercu() {
   </main>
 
 
-  );
-}
-export default primercu;
+
 /*
 <div class="card-body text-dark"> 
   </div>
@@ -85,3 +83,6 @@ export default primercu;
 
 
     </main>*/
+  );
+}
+export default primercu;

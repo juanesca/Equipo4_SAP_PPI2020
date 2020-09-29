@@ -1,10 +1,10 @@
 import React from 'react';
-import '../components/tiendatecnologia.css';
-import '../components/card.css';
-import Tiendacomidas from '../components/tiendatecnologia';
-import Card from '../components/cardtt';
-import Header from '../components/headertecnologia';
-import '../components/headertecnologia.css';
+
+
+import Tiendatecnologia from '../Components/tiendatecnologia';
+import Card from '../Components/cardtt';
+import Header from '../Components/Header2';
+
 
 
 

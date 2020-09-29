@@ -6,7 +6,10 @@ import Inicio from "./Inicio";
 import TiendaFood from './TiendaComidas';
 import Categorias from './Categorias';
 import DatPizza from '../Components/DatosProducto';
-import FnCompra from '../Components/FnCompra'
+import FnCompra from '../Components/FnCompra';
+import TiendaC from './Tiendac';
+import TiendaT from './Tiendat';
+import TiendaTe from './tiendatecnologia';
 
 import "../App.css";
 
@@ -28,6 +31,9 @@ export default function App() {
           <Route path="/Tienda-comida" component={TiendaFood} />
           <Route path="/Categorias" component={Categorias} />
           <Route path='/Datos-pizza' component={DatPizza} />
+          <Route path='/TiendaC' component={TiendaC} />
+          <Route path='/TiendaT' component={TiendaT} />
+          <Route path='/TiendaTe' component={TiendaTe} />
         </Switch>
       </Router>
     </div>
