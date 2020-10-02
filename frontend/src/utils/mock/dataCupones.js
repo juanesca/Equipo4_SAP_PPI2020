@@ -3,7 +3,7 @@ import melectro from '../mockImages/melectro.PNG'
 export const data = [
   {
     id: 1,
-    src: melectro,
+    src: '../mockImages/melectro.PNG',
     cant: 2,
     off: '50% off'
   },

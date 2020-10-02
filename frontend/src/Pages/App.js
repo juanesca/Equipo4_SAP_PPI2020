@@ -19,12 +19,10 @@ export default function App() {
   return (
     <div className="App">
       <Router>
-          <Link to='/Inicio'>
-            <button>Inicio</button>
-          </Link>
+          
         <Switch>
           <Route path="/Fin-compra" component={FnCompra} />
-          <Route path="/Inicio" component={Inicio} />
+          <Route exact path="/" component={Inicio} />
           <Route path="/Login" component={Login} />
           <Route path="/Facebook-login" component={Facebook} />
           <Route path="/Perfil" component={Perfil} />

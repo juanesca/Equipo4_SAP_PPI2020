@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 
-import Header from "../Components/Header";
-
 import "./css/Categorias.css";
 
 function Categorias(props) {
@@ -10,18 +8,6 @@ function Categorias(props) {
 
   return (
     <div id="contenedor" className="container-fluid">
-      {//<Header />
-      }
-
-      {/*<div id="header">
-        <div id="menu"></div>
-        <div id="title">
-          <h1>Recapito</h1>
-        </div>
-        <div id="perfil">
-          <h3>Alguien</h3>
-        </div>
-         </div>*/}
 
       <div id="emergente">
         <div id="titulo">
@@ -44,15 +30,8 @@ function Categorias(props) {
         <h1 id="text">HAZ TU ELECCION</h1>
       </div>
       <div id="contenedor">
-        <div id="header">
-          <div id="menu" onClick={() => {
-            document.getElementById("emergente").style.display = "flex";
-            document.getElementsByClassName("buscador")[0].disabled = true;
-            document.getElementById("contenedor").style.filter = "blur(5px)";
-            document.getElementById("contenedor").style.zIndex = "1";
-            document.getElementById("emergente").style.zIndex = "2";
-            document.getElementById("emergente").style.opacity = "100%";
-          }}>
+        {/*<div id="header">
+          <div id="menu" >
           </div>
           <div id="title">
             Recapito
@@ -61,7 +40,28 @@ function Categorias(props) {
             <h3>Alguien</h3>
           </div>
         </div>
-
+*/}<header className="navbar navbar-light bg-light shadow-sm container-fluid">
+                <section className="navbar-brand border border-dark w-70 m-0 pl-3">
+                    <span className="navbar-toggler-icon" onClick={() => {
+            document.getElementById("emergente").style.display = "flex";
+            document.getElementsByClassName("buscador")[0].disabled = true;
+            document.getElementById("contenedor").style.filter = "blur(5px)";
+            document.getElementById("contenedor").style.zIndex = "1";
+            document.getElementById("emergente").style.zIndex = "2";
+            document.getElementById("emergente").style.opacity = "100%";
+          }}></span>
+                    <span>{" "}
+          RECAPITO{" "}</span>
+                </section>
+                <section
+                    onClick={() => history.push('/Perfil')}
+                    className="navbar-brand text-center border border-dark w-30 m-0">
+                        <figure className="d-inline m-0">
+                            <img className="rounded-circle" src={require('../images/perfil.PNG')} alt="" width="30 px" height="30 px" />
+                            <figcaption className="d-inline">ALGUIEN</figcaption>
+                        </figure>
+                </section>
+            </header>
       <div id="buscador" className="justify-content-center">
         <input
           type="search"

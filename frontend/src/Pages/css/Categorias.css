@@ -9,7 +9,7 @@
     margin: 10px;
     align-items: center;
 }
-#menu{
+/*#menu{
     background-image: url(https://www.samueldiosdado.com/wp-content/uploads/2017/08/Men%C3%BA-hamburguesa-herramienta-practica-o-icono-inutil.png);
     background-size:100% 100%;
     background-position-y:center;
@@ -20,7 +20,7 @@
     max-width: 10vh;   
     max-height: 10vh; 
     cursor: pointer;
-}
+}*/
 #title{
     flex-shrink: 2;
     font-size: 8vw;
@@ -44,7 +44,6 @@
 #contenedor{
     display:flex;
     flex-flow: column;
-    align-items: center;
     font-weight: bold;
     background-image: url(https://1.bp.blogspot.com/-In-d_Hj1GGI/X2ETbzxbIfI/AAAAAAAAPRc/pERQOkUIurM9_x8eKvSwD_SjemdW4PccQCLcBGAsYHQ/s16000/lunch-break.jpg);
     background-size:100% 100%;

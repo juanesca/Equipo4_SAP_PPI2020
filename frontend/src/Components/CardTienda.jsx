@@ -2,7 +2,7 @@ import React from 'react'
 
 function CardTienda(props) {
     return (
-        <div>
+        <div className="container-fluid">
             {props.data.map((item, index) => {
                 return (
                     <div class="card border-dark mb-3" type="button" key={`item-${index}`}>
