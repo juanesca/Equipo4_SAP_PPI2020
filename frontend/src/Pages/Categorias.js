@@ -30,17 +30,7 @@ function Categorias(props) {
         <h1 id="text">HAZ TU ELECCION</h1>
       </div>
       <div id="contenedor">
-        {/*<div id="header">
-          <div id="menu" >
-          </div>
-          <div id="title">
-            Recapito
-                    </div>
-          <div id="perfil">
-            <h3>Alguien</h3>
-          </div>
-        </div>
-*/}<header className="navbar navbar-light bg-light shadow-sm container-fluid">
+        <header className="navbar navbar-light bg-light shadow-sm container-fluid">
                 <section className="navbar-brand border border-dark w-70 m-0 pl-3">
                     <span className="navbar-toggler-icon" onClick={() => {
             document.getElementById("emergente").style.display = "flex";

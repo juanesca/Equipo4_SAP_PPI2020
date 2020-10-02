@@ -140,7 +140,9 @@ function Perfil(props) {
       <div className="overlay" id="overlay0">
         <div className="popup mx-4" id="popup0">
           <button id="btn-cerrar-popup0" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </button>
           <h3>Elige una imagen</h3>
           <form>
