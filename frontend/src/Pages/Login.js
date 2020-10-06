@@ -74,7 +74,7 @@ function Login(props) {
 
       <div className="container">
         <form className="form col-12 col-md-6">
-          <div className="btn">
+          <div className="btn w-75">
             <button
               onClick={() => history.push("/Perfil")}
               type="button"
@@ -83,7 +83,7 @@ function Login(props) {
               Perfil de usuario
             </button>
           </div>
-          <div className="form-group">
+          <div className="form-group w-75">
             <label htmlFor="exampleDropdownFormEmail2">Usuario</label>
             <input
               type="email"
@@ -93,7 +93,7 @@ function Login(props) {
             ></input>
           </div>
 
-          <div className="form-group">
+          <div className="form-group w-75">
             <label htmlFor="exampleDropdownFormPassword2">Contraseña</label>
             <input
               type="password"
