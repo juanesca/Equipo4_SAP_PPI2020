@@ -73,8 +73,8 @@ function Login(props) {
       <h1 className="text-dark text-center my-5">R E C A P I T O</h1>
 
       <div className="container">
-        <form className="form col-12 col-md-6">
-          <div className="btn w-75">
+        <form>
+          {/*<div className="btn w-75">
             <button
               onClick={() => history.push("/Perfil")}
               type="button"
@@ -82,8 +82,8 @@ function Login(props) {
             >
               Perfil de usuario
             </button>
-          </div>
-          <div className="form-group w-75">
+  </div>*/}
+          <div className="form-group">
             <label htmlFor="exampleDropdownFormEmail2">Usuario</label>
             <input
               type="email"
@@ -93,7 +93,7 @@ function Login(props) {
             ></input>
           </div>
 
-          <div className="form-group w-75">
+          <div className="form-group">
             <label htmlFor="exampleDropdownFormPassword2">Contraseña</label>
             <input
               type="password"
@@ -109,7 +109,7 @@ function Login(props) {
           <button
             onClick={() => history.push("/Facebook-login")}
             type="submit"
-            className="btn btn-primary"
+            className="btn btn-primary d-block"
           >
             Facebook
           </button>
