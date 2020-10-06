@@ -67,6 +67,9 @@ import { withRouter } from "react-router-dom";
 
 function Login(props) {
   const { history } = props;
+
+
+ 
   return (
     <main>
       <h1 className="text-dark text-center my-5">TE DAMOS LA BIENVENIDA A</h1>
@@ -106,13 +109,8 @@ function Login(props) {
           <button type="submit" className="btn btn-primary">
             CONTINUAR
           </button>
-          <button
-            onClick={() => history.push("/Facebook-login")}
-            type="submit"
-            className="btn btn-primary d-block"
-          >
-            Facebook
-          </button>
+          <div className="fb-login-button d-block mt-5" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
+  onlogin="checkLoginState()"></div>
         </form>
       </div>
     </main>
