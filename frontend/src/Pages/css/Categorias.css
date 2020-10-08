@@ -106,7 +106,6 @@
     }
 }
 #imgtec{
-    background-image: url(https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg);
     background-size:100% 100%;
     width: 50vw;
     height: 29vw;
@@ -117,7 +116,7 @@
 }
 #tec,#com,#text{    
     border-radius: 5px;    
-    font-size:8vh; 
+    font-size: 8%; 
     margin:0;
 }
 #imgcom{

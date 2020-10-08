@@ -139,11 +139,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay0">
         <div className="popup mx-4" id="popup0">
-          <button id="btn-cerrar-popup0" className="btn-cerrar-popup">
-            <button type="button" class="close" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </button>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup0" aria-label="close" role="button">&times;</i>
           <h3>Elige una imagen</h3>
           <form>
             <div className="justify-content-center contenedor-inputs">
@@ -212,9 +208,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay1">
         <div className="popup mx-4" id="popup1">
-          <button href="#" id="btn-cerrar-popup1" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
-          </button>
+            <i className="btn-cerrar-popup" id="btn-cerrar-popup1" aria-label="close" role="button">&times;</i>
           <h3>Dirección</h3>
           <form action="">
             <div className="contenedor-inputs">
@@ -227,9 +221,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay2">
         <div className="popup mx-4" id="popup2">
-          <button href="#" id="btn-cerrar-popup2" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
-          </button>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup2" aria-label="close" role="button">&times;</i>
           <h3>Telefono</h3>
           <form action="">
             <div className="contenedor-inputs">
@@ -243,9 +235,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay3">
         <div className="popup mx-4" id="popup3">
-          <button href="#" id="btn-cerrar-popup3" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
-          </button>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup3" aria-label="close" role="button">&times;</i>
           <h3>Recibos</h3>
           <form action="">
             <Recibos />
@@ -255,9 +245,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay4">
         <div className="popup mx-4" id="popup4">
-          <button href="#" id="btn-cerrar-popup4" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
-          </button>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup4" aria-label="close" role="button">&times;</i>
           <h3>Mas Comprados</h3>
           <form action="">
             <MComprados />
@@ -267,9 +255,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay5">
         <div className="popup mx-4" id="popup5">
-          <button href="#" id="btn-cerrar-popup5" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
-          </button>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup5" aria-label="close" role="button">&times;</i>
           <h3>Favoritos</h3>
           <form action="">
             <Favs />
@@ -279,9 +265,7 @@ function Perfil(props) {
 
       <div className="overlay" id="overlay6">
         <div className="popup mx-4" id="popup6">
-          <button href="#" id="btn-cerrar-popup6" className="btn-cerrar-popup">
-            <i className="fas fa-times"></i>
-          </button>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup6" aria-label="close" role="button">&times;</i>
           <h3>Cupones</h3>
           <form action="">
             <Cupones />

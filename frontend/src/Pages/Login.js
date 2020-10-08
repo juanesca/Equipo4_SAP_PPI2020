@@ -75,7 +75,7 @@ function Login(props) {
       <h1 className="text-dark text-center my-5">TE DAMOS LA BIENVENIDA A</h1>
       <h1 className="text-dark text-center my-5">R E C A P I T O</h1>
 
-      <div className="container">
+      <div className="container-fluid mx-5">
         <form>
           {/*<div className="btn w-75">
             <button
@@ -105,12 +105,13 @@ function Login(props) {
               placeholder="Contraseña"
             ></input>
           </div>
-
-          <button type="submit" className="btn btn-primary">
+          <div className="d-flex flex-column">
+          <button type="submit" className="btn btn-primary w-50 mx-auto" onClick={() => {history.push('/Categorias')}}>
             CONTINUAR
           </button>
-          <div className="fb-login-button d-block mt-5" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
+          <div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
   onlogin="checkLoginState()"></div>
+  </div>
         </form>
       </div>
     </main>
