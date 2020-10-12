@@ -1,6 +1,8 @@
 import React from "react";
+
 import './segundocuad.css';
 function segundocu() {
+  
   return (
 
 <div className="cuadro">
