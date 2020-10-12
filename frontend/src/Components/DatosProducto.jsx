@@ -15,7 +15,11 @@ function DatosProducto(props) {
                     <div className="card-body">
                         <div className="d-flex">
                             <p className="mr-auto">- 8 partes</p>
+<<<<<<< HEAD
                             <button type="button" className="btn btn-danger" onClick={()=> history.push('/segundocuad')} >
+=======
+                            <button type="button" className="btn btn-danger" onClick={()=> history.push('/')} >
+>>>>>>> 55e10195e5d23e785398f358ada6c601ea00d154
                                 HAZ TU PEDIDO
                         </button>
                         </div>

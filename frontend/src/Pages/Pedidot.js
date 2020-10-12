@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/pedidot.css';
+import './css/Pedidot.css';
 
 function Pedidot() {
 return (
