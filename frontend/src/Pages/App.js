@@ -10,6 +10,7 @@ import FnCompra from '../Components/FnCompra';
 import TiendaC from './Tiendac';
 import TiendaT from './Tiendat';
 import TiendaTe from './tiendatecnologia';
+import Primercuad from '../Components/Primercuad';
 
 import "../App.css";
 
@@ -32,6 +33,10 @@ export default function App() {
           <Route path='/TiendaC' component={TiendaC} />
           <Route path='/TiendaT' component={TiendaT} />
           <Route path='/TiendaTe' component={TiendaTe} />
+          <Route path='/TiendaTe' component={TiendaTe} />
+          <Route path='/Primercuad' component={Primercuad} />
+
+
         </Switch>
       </Router>
     </div>
