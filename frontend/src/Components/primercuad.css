@@ -8,3 +8,19 @@
   .card-align{
       text-align: center;
   }
+
+  div.align-center{
+    margin-bottom: 15px;
+    height: 20px;
+    width: 10px;
+    padding:10px ;
+    vertical-align: center;
+    margin-left: 245px;
+    left: 10px;
+
+}
+input{
+    vertical-align: center;
+}
+    
+    

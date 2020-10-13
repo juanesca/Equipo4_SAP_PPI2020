@@ -21,7 +21,7 @@ function imagenes(props) {
                     <img height="100px" width="15px" src="https://cocina-casera.com/wp-content/uploads/2016/11/hamburguesa-queso-receta.jpg" className="card-img-top img-fluid" alt="..." display="inline" background-color="red" />
                     <div className="card-body" />
                     <h5 className="card-title">Producto</h5>
-                    <a href="" text-align="center" className="btn btn-dark text-white center">Comprar</a>
+                    <a href="" text-align="center" className="btn btn-dark text-white center"> Comprar </a>
                 </div>
             </div>
             <div className="col mb-4 center">

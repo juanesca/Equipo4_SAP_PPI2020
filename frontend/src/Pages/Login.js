@@ -60,7 +60,7 @@ export default function Login() {
       </div>
     </div>
   );
-}*/
+}
 import React from "react";
 
 import { withRouter } from "react-router-dom";
@@ -85,7 +85,7 @@ function Login(props) {
             >
               Perfil de usuario
             </button>
-  </div>*/}
+  </div>}
           <div className="form-group">
             <label htmlFor="exampleDropdownFormEmail2">Usuario</label>
             <input
@@ -118,4 +118,43 @@ function Login(props) {
   );
 }
 
+export default withRouter(Login);*/
+
+import React from "react";
+
+import { withRouter } from "react-router-dom";
+import './css/Login.css';
+
+function Login(props) {
+  const { history } = props;
+  return (
+<main>
+
+<h1 class="text-dark text-center my-5">TE DAMOS LA BIENVENIDA A</h1>
+<h1 class="text-dark text-center my-5">R E C A P I T O</h1>
+
+
+  <div class="form-group">
+<label for="exampleDropdownFormEmail2">Usuario</label>
+<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Usuario">
+  </input>
+</div>
+    
+    <div class="form-group">
+<label for="exampleDropdownFormPassword2">Contraseña</label>
+<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+</input>
+    </div>
+  
+
+<button type="submit" class="btn btn-primary"  onClick={() => {history.push('/Categorias')} }>
+CONTINUAR
+  </button>
+
+
+
+</main>
+
+);
+}
 export default withRouter(Login);

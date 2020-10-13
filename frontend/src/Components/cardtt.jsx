@@ -1,7 +1,9 @@
-'use strict';
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import './cardtt.css';
-function imagenes() {
+function imagenes(props) {
+    const { history } = props;
     return (
 
         <div class="row row-cols-1 row-cols-md-3 row-cols-md-2 ">
@@ -10,7 +12,7 @@ function imagenes() {
                     <img height="100px"width="15px" src="https://falabella.scene7.com/is/image/FalabellaCO/4168095_1?q=i?wid=800&hei=800&qlt=70" class="card-img-top" alt="..." display="inline"background-color = "red" />
                     <div class="card-body" />
                     <h5 class="card-title">Producto</h5>
-                    <a href="" class="btn btn-dark text-white">Comprar</a>
+                    <a href="" class="btn btn-dark text-white"onClick={()=> history.push('')} >Comprar</a>
                 </div>
             </div>
 
@@ -39,19 +41,7 @@ function imagenes() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
     )
 }
 
-export default imagenes;
+export default withRouter(imagenes);

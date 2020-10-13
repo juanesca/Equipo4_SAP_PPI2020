@@ -1,11 +1,14 @@
 import React from "react";
-import'./primercuad.css'
+import'./Primercuad.css'
+import { withRouter } from 'react-router-dom';
 
-function primercu() {
+
+function primercu(props) {
+  const { history } = props;
+
+
   return (
 <main>
-
-
    <div class="card-align">
     <div class="card border-dark mb-3">
   <div class="card-header">PRODUCTO</div>
@@ -28,6 +31,23 @@ function primercu() {
   </div>
   </div>
   </div>
+  <div className="cuadro">
+<div className="align-text">
+<h2>Datos del comprador</h2>
+
+        <div className="contenedor" />
+        <div className="input-contenedor" />
+        <input type="text" placeholder="Nombre:" />
+
+        <div className="input-contenedor" />
+        <input type="text" placeholder="Telefono:" />
+
+        <div className="input-contenedor" />
+        <input type="text" placeholder="Direccion:" />
+       </div>
+       <button type="button" class="btn btn-dark" Finalizar compra onClick={()=> history.push('/Fin-compra')} />
+</div>
+
   </main>
 
 
@@ -85,4 +105,4 @@ function primercu() {
     </main>*/
   );
 }
-export default primercu;
+export default withRouter(primercu);

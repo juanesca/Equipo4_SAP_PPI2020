@@ -1,8 +1,14 @@
 import React from "react";
+<<<<<<< HEAD
 import { withRouter } from "react-router-dom";
 import './segundocuad.css';
 function segundocu(props) {
   const { history } = props;
+=======
+
+import './segundocuad.css';
+function segundocu() {
+>>>>>>> e2d01685ac1fb464fcf92286132dea9e26d8f680
   
   return (
 

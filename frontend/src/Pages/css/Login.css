@@ -1,0 +1,17 @@
+.container {
+    text-align: left;
+    margin: auto;
+  
+  }
+  
+  
+  .form {
+    margin: auto;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  .boton {
+    height: 70px;
+  border-radius: 3%;
+  }
+  
