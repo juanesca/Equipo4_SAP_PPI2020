@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import './css/Tiendat.css';
 
 
-function Tiendat(props) {
+function TiendaT(props) {
   const { history } = props;
   return (
     <main>
@@ -73,4 +73,4 @@ function Tiendat(props) {
   );
 }
 
-export default withRouter(Tiendat);
+export default withRouter(TiendaT);

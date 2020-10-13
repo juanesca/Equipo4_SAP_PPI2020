@@ -1,25 +1,16 @@
 import React from 'react';
-import Carritocomidas from '../Components/carritocomidas';
 import Header from '../Components/Header';
-import Primercuad  from '../Components/Primercuad';
-import '../Components/Primercuad.css';
-/*import '../components/segundocuad.css';*/
+import Primercuad from '../Components/primercuad';
+import '../Components/primercuad.css';
 
 
 function pagina2() {
-    return (
-      <div >
-        < Header />
-        < Carritocomidas />
-        < Primercuad />
-     
-        
-        
-     
-        
-        
-      </div>
-    );
-  }
-  
-  export default pagina2;
+  return (
+    <div >
+      < Header />
+      < Primercuad />
+    </div>
+  );
+}
+
+export default pagina2;

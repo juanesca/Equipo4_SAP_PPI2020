@@ -68,22 +68,16 @@ function Categorias(props) {
           <h3>Categorias</h3>
           <form action="" className="justify-content-center">
             <figure>
-              <figcaption id="tec" className="mx-auto">Tecnologias</figcaption>
-              <img id="imgtec" src="https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg" alt="..."  onClick={()=> history.push('/Tiendat')}/>
+              <figcaption className="mx-auto">Tecnologias</figcaption>
+              <img id="imgtec" src={require('../images/CategoriaTech.jpg')} alt="..." className="img-fluid" onClick={() => history.push('/TiendaT')} />
+
             </figure>
-            </form>
-            <div id="TECNOLOGIA" className="d-flex"> 
-            </div>
-            <div id="comida" className="d-flex">
-            <form action="" className="justify-content-center">
             <figure>
-              <figcaption id="com" className="mx-auto">Comidas</figcaption>
-              <div id="imgcom" onClick={()=> history.push('/Tiendac')}/>
-             
-              </figure>
-               </form>
-            </div>
-    
+              <figcaption className="mx-auto vw-8">Comidas</figcaption>
+              <img id="imgtec" src={require('../images/CategoriaComida.PNG')} alt="..." className="img-fluid" onClick={() => history.push('/TiendaC')}/>
+
+            </figure>
+          </form>
         </div>
       </div>
     </div>

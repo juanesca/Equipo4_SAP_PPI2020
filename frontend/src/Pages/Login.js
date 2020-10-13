@@ -109,10 +109,8 @@ function Login(props) {
             <button type="submit" className="btn btn-primary w-50 mx-auto" onClick={() => { history.push('/Categorias') }}>
               CONTINUAR
           </button>
-            {<div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
-              onLogin="checkLoginState()"></div>
-            }
-
+            {/*<div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
+              onLogin="checkLoginState()"></div>}
           </div>
         </form>
       </div>
