@@ -1,11 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-
 import Header from '../Components/Header';
-
 function DatosProducto(props) {
     const { history } = props;
-
     return (
         <React.Fragment>
             <div className="container-fluid">
@@ -15,15 +12,7 @@ function DatosProducto(props) {
                     <div className="card-body">
                         <div className="d-flex">
                             <p className="mr-auto">- 8 partes</p>
-<<<<<<< HEAD
                             <button type="button" className="btn btn-danger" onClick={()=> history.push('/PedidoC')} >
-=======
-<<<<<<< HEAD
-                            <button type="button" className="btn btn-danger" onClick={()=> history.push('/segundocuad')} >
-=======
-                            <button type="button" className="btn btn-danger" onClick={()=> history.push('/')} >
->>>>>>> 55e10195e5d23e785398f358ada6c601ea00d154
->>>>>>> e2d01685ac1fb464fcf92286132dea9e26d8f680
                                 HAZ TU PEDIDO
                         </button>
                         </div>
@@ -34,8 +23,6 @@ function DatosProducto(props) {
                         <p>* Tomate</p>
                     </div>
                 </div>
-
-
                 <div className="d-flex" >
                     <div className="mr-auto">
                         <p className="text">CHAT</p>
@@ -54,11 +41,7 @@ function DatosProducto(props) {
                     </div>
                 </div>
             </div>
-
-
-
         </React.Fragment>
     )
 }
-
 export default withRouter(DatosProducto);

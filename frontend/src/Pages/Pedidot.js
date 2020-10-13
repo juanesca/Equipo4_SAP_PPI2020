@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import './css/Pedidot.css';
->>>>>>> e2d01685ac1fb464fcf92286132dea9e26d8f680
 
 function Pedidot() {
 return (

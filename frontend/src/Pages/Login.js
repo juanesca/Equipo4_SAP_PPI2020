@@ -110,7 +110,7 @@ function Login(props) {
               CONTINUAR
           </button>
             {/*<div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
-              onLogin="checkLoginState()"></div>*/}
+              onLogin="checkLoginState()"></div>}
           </div>
         </form>
       </div>
