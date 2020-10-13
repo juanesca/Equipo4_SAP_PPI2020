@@ -77,7 +77,7 @@ function Login(props) {
 
       <div className="container-fluid mx-5">
         <form className="mx-auto container-fluid">
-          {/*<div className="btn w-75">
+          {<div className="btn w-75">
             <button
               onClick={() => history.push("/Perfil")}
               type="button"
@@ -109,16 +109,18 @@ function Login(props) {
             <button type="submit" className="btn btn-primary w-50 mx-auto" onClick={() => { history.push('/Categorias') }}>
               CONTINUAR
           </button>
-            {/*<div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
-              onLogin="checkLoginState()"></div>*/}
+            {<div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
+              onLogin="checkLoginState()"></div>
+            }
+
           </div>
         </form>
       </div>
     </div>
   );
 }
+*/
 
-export default withRouter(Login);*/
 
 import React from "react";
 

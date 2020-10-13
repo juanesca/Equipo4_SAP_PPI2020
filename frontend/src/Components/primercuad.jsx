@@ -1,43 +1,52 @@
 import React from "react";
-import'./Primercuad.css'
+import'./Primercuad.css';
 import { withRouter } from 'react-router-dom';
 
 
 function primercu(props) {
   const { history } = props;
-
-
   return (
 <main>
    <div class="card-align">
     <div class="card border-dark mb-3">
   <div class="card-header">PRODUCTO</div>
   <div class="card-body text-dark">
-    <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2017/04/pizzapepperoni0.jpg">
+    <img height="115px" width="100px" src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2017/04/pizzapepperoni0.jpg" >
 
     </img>
   </div>
   </div>
   <div class="card border-dark mb-3">
   <div class="card-header">COSTO FINAL</div>
+  <br>
+  </br>
+  <br>
+  </br>
   <div class="card-body text-dark">
     <h5 class="card-title">$19.900</h5>
+    <br>
+  </br>
   </div>
   </div>
   <div class="card border-dark mb-3">
   <div class="card-header">MEDIO DE PAGO</div>
+  <br>
+  </br>
+  <br>
+  </br>
   <div class="card-body text-dark">
     <h5 class="card-title">EFECTIVO</h5>
+    <br>
+  </br>
   </div>
   </div>
   </div>
-  <div className="cuadro">
-<div className="align-text">
-<h2>Datos del comprador</h2>
 
-        <div className="contenedor" />
-        <div className="input-contenedor" />
-        <input type="text" placeholder="Nombre:" />
+  <h2>Datos del comprador</h2>
+  <div class="cuadro">
+        <div height="30px" width="20px" className="contenedor" />
+        <div height="30px" width="20px" className="input-contenedor" />
+        <input height="30px" width="20px" type="text" placeholder="Nombre:" />
 
         <div className="input-contenedor" />
         <input type="text" placeholder="Telefono:" />
@@ -45,12 +54,10 @@ function primercu(props) {
         <div className="input-contenedor" />
         <input type="text" placeholder="Direccion:" />
        </div>
-       <button type="button" class="btn btn-dark" Finalizar compra onClick={()=> history.push('/Fin-compra')} />
-</div>
+       <button type="button" class="btn btn-dark"onClick={()=> history.push('/Fin-Compra')} >Finalizar compra</button>
+
 
   </main>
-
-
 
 /*
 <div class="card-body text-dark"> 

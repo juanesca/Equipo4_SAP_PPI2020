@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 
 import "./css/Categorias.css";
 import "../Components/popup.css";
-import '../App.css';
 
 
 function Categorias(props) {
@@ -53,35 +52,22 @@ function Categorias(props) {
 
       <div>
 
-        <div className="mx-auto d-flex">
+        <div id="buscador" className="d-flex justify-content-center">
           <input
             type="search"
-            className="mx-auto"
+            className="buscador d-flex justify-content-center"
             placeholder="Busca algun producto"
             onClick={() => history.push("/Tienda-comida")}
-            id="buscador"
           />
         </div>
       </div>
 
-      <div className="overlay container-fluid" id="overlay">
+      <div className="overlay" id="overlay">
         <div className="popup mx-4" id="popup">
-        <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
-          <h3 className="container-fluid">Categorias</h3>
+          <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
+          <h3>Categorias</h3>
           <form action="" className="justify-content-center">
             <figure>
-<<<<<<< HEAD
-              <figcaption className="mx-auto">Tecnologias</figcaption>
-              <img id="imgtec" src={require('../images/CategoriaTech.jpg')} alt="..." className="img-fluid" onClick={() => history.push('/TiendaT')} />
-
-            </figure>
-            <figure>
-              <figcaption className="mx-auto vw-8">Comidas</figcaption>
-              <img id="imgtec" src={require('../images/CategoriaComida.PNG')} alt="..." className="img-fluid" onClick={() => history.push('/TiendaC')}/>
-
-            </figure>
-          </form>
-=======
               <figcaption id="tec" className="mx-auto">Tecnologias</figcaption>
               <img id="imgtec" src="https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg" alt="..."  onClick={()=> history.push('/Tiendat')}/>
             </figure>
@@ -98,7 +84,6 @@ function Categorias(props) {
                </form>
             </div>
     
->>>>>>> e2d01685ac1fb464fcf92286132dea9e26d8f680
         </div>
       </div>
     </div>
