@@ -52,12 +52,13 @@ function Categorias(props) {
 
       <div>
 
-        <div id="buscador" className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
           <input
             type="search"
-            className="buscador d-flex justify-content-center"
+            className="d-flex justify-content-center"
             placeholder="Busca algun producto"
             onClick={() => history.push("/Tienda-comida")}
+            id="buscador"
           />
         </div>
       </div>

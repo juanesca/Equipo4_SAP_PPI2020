@@ -3,7 +3,7 @@ import React from "react";
 import Perfil from "./Perfil";
 import Login from "./Login";
 import Inicio from "./Inicio";
-import TiendaFood from './TiendaComidas';
+import TiendaFood from './ProductosComidas';
 import Categorias from './Categorias';
 import DatPizza from '../Components/DatosProducto';
 import FnCompra from '../Components/FnCompra';
@@ -11,9 +11,7 @@ import TiendaC from './TiendaC';
 import TiendaT from './TiendaT';
 import TiendaTe from './tiendatecnologia';
 import Pedido from './PedidoT';
-import pedidoC from './pedidocomidas';
-import Primercuad from '../Components/primercuad';
-import Pedidot from "./PedidoT"
+import pedidoC from './PedidoComidas';
 
 import "../App.css";
 
@@ -29,16 +27,14 @@ export default function App() {
           <Route exact path="/" component={Inicio} />
           <Route path="/Login" component={Login} />
           <Route path="/PedidoT" component={Pedido} />
-          <Route path="/PedidoC" component={pedidoC} />
+          <Route path="/PedidoComida" component={pedidoC} />
           <Route path="/Perfil" component={Perfil} />
-          <Route path="/Tienda-comida" component={TiendaFood} />
+          <Route path="/Productos" component={TiendaFood} />
           <Route path="/Categorias" component={Categorias} />
           <Route path='/Datos-pizza' component={DatPizza} />
           <Route path='/TiendaC' component={TiendaC} />
           <Route path='/TiendaT' component={TiendaT} />
           <Route path='/TiendaTe' component={TiendaTe} />
-          <Route path='/Primercuad' component={Primercuad} />
-          <Route path='/Datos-computador' component={Pedidot} />
         </Switch>
       </Router>
     </div>
