@@ -10,7 +10,7 @@ import FnCompra from '../Components/FnCompra';
 import TiendaC from './Restaurantes';
 import TiendaT from './TiendaTechno';
 import TiendaTe from './tiendatecnologia';
-import Pedido from './PedidoT';
+import Pedido from './PedidoTechno';
 import pedidoC from './PedidoComidas';
 
 import "../App.css";
