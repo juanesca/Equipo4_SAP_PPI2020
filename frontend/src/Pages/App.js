@@ -8,7 +8,7 @@ import Categorias from './Categorias';
 import DatPizza from '../Components/DatosProducto';
 import FnCompra from '../Components/FnCompra';
 import TiendaC from './Restaurantes';
-import TiendaT from './TiendaT';
+import TiendaT from './TiendaTechno';
 import TiendaTe from './tiendatecnologia';
 import Pedido from './PedidoT';
 import pedidoC from './PedidoComidas';
