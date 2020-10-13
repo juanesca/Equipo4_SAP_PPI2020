@@ -69,14 +69,14 @@ function Login(props) {
   const { history } = props;
 
 
- 
+
   return (
-    <main>
+    <div className="flex-wrap">
       <h1 className="text-dark text-center my-5">TE DAMOS LA BIENVENIDA A</h1>
       <h1 className="text-dark text-center my-5">R E C A P I T O</h1>
 
       <div className="container-fluid mx-5">
-        <form>
+        <form className="mx-auto container-fluid">
           {/*<div className="btn w-75">
             <button
               onClick={() => history.push("/Perfil")}
@@ -90,13 +90,13 @@ function Login(props) {
             <label htmlFor="exampleDropdownFormEmail2">Usuario</label>
             <input
               type="email"
-              className="form-control"
+              className="form-control w-75"
               id="exampleDropdownFormEmail2"
               placeholder="Usuario"
             ></input>
           </div>
 
-          <div className="form-group">
+          <div className="form-group w-75">
             <label htmlFor="exampleDropdownFormPassword2">Contraseña</label>
             <input
               type="password"
@@ -105,16 +105,16 @@ function Login(props) {
               placeholder="Contraseña"
             ></input>
           </div>
-          <div className="d-flex flex-column">
-          <button type="submit" className="btn btn-primary w-50 mx-auto" onClick={() => {history.push('/Categorias')}}>
-            CONTINUAR
+          <div className="d-flex flex-column container-fluid">
+            <button type="submit" className="btn btn-primary w-50 mx-auto" onClick={() => { history.push('/Categorias') }}>
+              CONTINUAR
           </button>
-          <div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
-  onlogin="checkLoginState()"></div>
-  </div>
+            {/*<div className="fb-login-button mt-5 mx-auto" data-size="large" data-button-type="continue_with" data-layout="rounded" data-auto-logout-link="false" data-use-continue-as="false" data-width="" scope="public_profile,email"
+              onLogin="checkLoginState()"></div>*/}
+          </div>
         </form>
       </div>
-    </main>
+    </div>
   );
 }
 

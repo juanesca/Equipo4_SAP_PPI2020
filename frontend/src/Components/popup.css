@@ -52,6 +52,12 @@
     transform: scale(0.7);
     opacity: 0;
   }
+
+  @media (min-width: 1441px){
+    .popup {
+      width: 1100px;
+    }
+  }
   
   .popup .btn-cerrar-popup {
     font-size: 16px;

@@ -1,6 +1,9 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import './segundocuad.css';
-function segundocu() {
+function segundocu(props) {
+  const { history } = props;
+  
   return (
 
 <div className="cuadro">
@@ -17,7 +20,7 @@ function segundocu() {
         <div className="input-contenedor" />
         <input type="text" placeholder="Direccion:" />
        </div>
-        <button type="button" class="btn btn-dark">Finalizar compra</button>
+        <button type="button" class="btn btn-dark" onClick={()=> history.push('/Fin-Compra')} >Finalizar compra</button>
 </div>
 
 
@@ -29,4 +32,4 @@ function segundocu() {
 
 );
 }
-export default segundocu;
+export default withRouter(segundocu);

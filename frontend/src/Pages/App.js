@@ -1,15 +1,16 @@
 import React from "react";
 import Perfil from "./Perfil";
 import Login from "./Login";
-import Facebook from "./Facebook";
 import Inicio from "./Inicio";
 import TiendaFood from './TiendaComidas';
 import Categorias from './Categorias';
 import DatPizza from '../Components/DatosProducto';
 import FnCompra from '../Components/FnCompra';
-import TiendaC from './Tiendac';
-import TiendaT from './Tiendat';
+import TiendaC from './TiendaC';
+import TiendaT from './TiendaT';
 import TiendaTe from './tiendatecnologia';
+import Pedido from './Pedidot';
+import pedidoC from './pedidocomidas';
 
 import "../App.css";
 
@@ -24,7 +25,8 @@ export default function App() {
           <Route path="/Fin-compra" component={FnCompra} />
           <Route exact path="/" component={Inicio} />
           <Route path="/Login" component={Login} />
-          <Route path="/Facebook-login" component={Facebook} />
+          <Route path="/PedidoT" component={Pedido} />
+          <Route path="/PedidoC" component={pedidoC} />
           <Route path="/Perfil" component={Perfil} />
           <Route path="/Tienda-comida" component={TiendaFood} />
           <Route path="/Categorias" component={Categorias} />
@@ -32,6 +34,7 @@ export default function App() {
           <Route path='/TiendaC' component={TiendaC} />
           <Route path='/TiendaT' component={TiendaT} />
           <Route path='/TiendaTe' component={TiendaTe} />
+          
         </Switch>
       </Router>
     </div>

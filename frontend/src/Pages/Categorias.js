@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 
 import "./css/Categorias.css";
 import "../Components/popup.css";
+import '../App.css';
 
 
 function Categorias(props) {
@@ -52,37 +53,32 @@ function Categorias(props) {
 
       <div>
 
-        <div id="buscador" className="d-flex justify-content-center">
+        <div className="mx-auto d-flex">
           <input
             type="search"
-            className="buscador d-flex justify-content-center"
+            className="mx-auto"
             placeholder="Busca algun producto"
             onClick={() => history.push("/Tienda-comida")}
+            id="buscador"
           />
         </div>
       </div>
 
-      <div className="overlay" id="overlay">
+      <div className="overlay container-fluid" id="overlay">
         <div className="popup mx-4" id="popup">
-          <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
-          <h3>Categorias</h3>
+        <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
+          <h3 className="container-fluid">Categorias</h3>
           <form action="" className="justify-content-center">
             <figure>
-              <figcaption id="tec" className="mx-auto">Tecnologias</figcaption>
-              <img id="imgtec" src="https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg" alt="..." />
+              <figcaption className="mx-auto">Tecnologias</figcaption>
+              <img id="imgtec" src={require('../images/CategoriaTech.jpg')} alt="..." className="img-fluid" onClick={() => history.push('/TiendaT')} />
 
             </figure>
             <figure>
-              <figcaption id="tec" className="mx-auto">Tecnologias</figcaption>
-              <img id="imgtec" src="https://miro.medium.com/max/1024/1*vxjAHkrXbGG6gOiPZgjeZA.jpeg" alt="..." />
+              <figcaption className="mx-auto vw-8">Comidas</figcaption>
+              <img id="imgtec" src={require('../images/CategoriaComida.PNG')} alt="..." className="img-fluid" onClick={() => history.push('/TiendaC')}/>
 
             </figure>
-            <div id="TECNOLOGIA" className="d-flex"> 
-            </div>
-            <div id="comida" className="d-flex">
-              <h2 id="com">Comidas</h2>
-              <div id="imgcom"></div>
-            </div>
           </form>
         </div>
       </div>

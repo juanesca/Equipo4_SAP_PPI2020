@@ -4,6 +4,13 @@
 .w-30 {
     width: 30%;
 }
-#imgheader{
+/*#imgheader{
     background-image: url(./images/perfil.PNG);
+}*/
+.vw-8{
+    width: 8vw;
+}
+
+body{
+    margin: 0;
 }

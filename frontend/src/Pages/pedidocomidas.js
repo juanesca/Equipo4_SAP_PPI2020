@@ -1,9 +1,9 @@
 import React from 'react';
-import Carritocomidas from '../components/carritocomidas';
-import Header from '../components/header';
-import Primercuad  from '../components/primercuad';
-import Segundocuad from '../components/segundocuad';
-import '../components/primercuad.css';
+import Carritocomidas from '../Components/carritocomidas';
+import Header from '../Components/Header';
+import Primercuad  from '../Components/primercuad';
+import Segundocuad from '../Components/segundocuad';
+import '../Components/primercuad.css';
 /*import '../components/segundocuad.css';*/
 
 
