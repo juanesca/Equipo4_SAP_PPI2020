@@ -1,4 +1,5 @@
 import React from "react";
+
 import Perfil from "./Perfil";
 import Login from "./Login";
 import Inicio from "./Inicio";
@@ -6,23 +7,23 @@ import TiendaFood from './TiendaComidas';
 import Categorias from './Categorias';
 import DatPizza from '../Components/DatosProducto';
 import FnCompra from '../Components/FnCompra';
-
 import TiendaC from './TiendaC';
 import TiendaT from './TiendaT';
 import TiendaTe from './tiendatecnologia';
-import Pedido from './Pedidot';
+import Pedido from './PedidoT';
 import pedidoC from './pedidocomidas';
-
-
 import Primercuad from '../Components/primercuad';
-import Pedidot from "./Pedidot"
+import Pedidot from "./PedidoT"
+
 import "../App.css";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default function App() {
   return (
     <div className="App">
       <Router>
+
         <Switch>
           <Route path="/Fin-compra" component={FnCompra} />
           <Route exact path="/" component={Inicio} />
