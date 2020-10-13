@@ -1,0 +1,52 @@
+.btn {
+    position: relative;
+    height: 80%;
+    margin: 2% 22%;
+    bottom: 480px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.card-text{
+   text-align: center;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.card{
+  
+   margin: 2%;
+   width: 12rem;  
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+
+.card-title{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.card-header{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.text {
+    position: relative;
+    height: 80%;
+    margin: 2% 24%;
+    bottom: 250px; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.w-70 {
+    width: 70%;
+  }
+  .w-30 {
+    width: 30%;
+  }
+.imagen {
+    position: relative;
+    height: 80%;
+    margin: 2% 23%;
+    bottom: 270px; 
+}

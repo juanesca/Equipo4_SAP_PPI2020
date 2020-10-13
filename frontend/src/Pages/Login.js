@@ -77,7 +77,7 @@ function Login(props) {
 
       <div className="container-fluid mx-5">
         <form className="mx-auto container-fluid">
-          {/*<div className="btn w-75">
+          {<div className="btn w-75">
             <button
               onClick={() => history.push("/Perfil")}
               type="button"
@@ -117,8 +117,8 @@ function Login(props) {
     </div>
   );
 }
+*/
 
-export default withRouter(Login);*/
 
 import React from "react";
 

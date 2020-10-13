@@ -7,8 +7,6 @@ import { withRouter } from 'react-router-dom';
 
 function primercu(props) {
   const { history } = props;
-
-
   return (
     <main>
       <p class="centrado">

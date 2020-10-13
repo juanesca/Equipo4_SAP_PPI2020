@@ -19,6 +19,7 @@ function Inicio(props) {
         ></img>
       </figure>
     </div>
+
   );
 }
 export default withRouter(Inicio);

@@ -3,7 +3,6 @@ import { withRouter } from "react-router-dom";
 
 import "./css/Categorias.css";
 import "../Components/popup.css";
-import '../App.css';
 
 
 function Categorias(props) {
@@ -53,21 +52,20 @@ function Categorias(props) {
 
       <div>
 
-        <div className="mx-auto d-flex">
+        <div id="buscador" className="d-flex justify-content-center">
           <input
             type="search"
-            className="mx-auto"
+            className="buscador d-flex justify-content-center"
             placeholder="Busca algun producto"
             onClick={() => history.push("/Tienda-comida")}
-            id="buscador"
           />
         </div>
       </div>
 
-      <div className="overlay container-fluid" id="overlay">
+      <div className="overlay" id="overlay">
         <div className="popup mx-4" id="popup">
-        <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
-          <h3 className="container-fluid">Categorias</h3>
+          <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
+          <h3>Categorias</h3>
           <form action="" className="justify-content-center">
             <figure>
               <figcaption className="mx-auto">Tecnologias</figcaption>
