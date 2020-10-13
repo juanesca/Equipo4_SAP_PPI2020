@@ -135,14 +135,14 @@ function Login(props) {
 
 
   <div class="form-group">
-<label for="exampleDropdownFormEmail2">Usuario</label>
-<input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="Usuario">
+<label for="exampleDropdownFormEmail2" className="SinStella">Usuario</label>
+<input type="email" class="form-control SinStella" id="exampleDropdownFormEmail2" placeholder="Usuario">
   </input>
 </div>
     
     <div class="form-group">
-<label for="exampleDropdownFormPassword2">Contraseña</label>
-<input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Contraseña">
+<label for="exampleDropdownFormPassword2" className="SinStella">Contraseña</label>
+<input type="password" class="form-control SinStella" id="exampleDropdownFormPassword2" placeholder="Contraseña">
 </input>
     </div>
   

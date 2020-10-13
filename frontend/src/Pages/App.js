@@ -11,11 +11,12 @@ import TiendaC from './Restaurantes';
 import TiendaT from './TiendaTechno';
 import TiendaTe from './tiendatecnologia';
 import Pedido from './PedidoTechno';
-import pedidoC from './PedidoComidas';
+import PedidoComida from "./PedidoComida";
 
 import "../App.css";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
           <Route exact path="/" component={Inicio} />
           <Route path="/Login" component={Login} />
           <Route path="/PedidoT" component={Pedido} />
-          <Route path="/PedidoComida" component={pedidoC} />
+          <Route path="/PedidoComida" component={PedidoComida} />
           <Route path="/Perfil" component={Perfil} />
           <Route path="/Productos" component={TiendaFood} />
           <Route path="/Categorias" component={Categorias} />

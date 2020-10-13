@@ -2,7 +2,7 @@ export const data = [
     {
         id: 1,
         url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRucNXlKcU-27xEw5q0nQ0ozArdLYBFeO-B1g&usqp=CAU',
-        path: '/Tienda-comida',
+        path: '/Productos',
         nombre: 'Comidas Rapidas El Gordo Montoya'
     },
     {

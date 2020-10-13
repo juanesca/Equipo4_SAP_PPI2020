@@ -23,7 +23,7 @@ function Tiendac(props) {
     <div class="card-align">
     <div class="card border-dark mb-3">
   <div class="card-header">TIENDA</div>
-  <img height="200px" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRucNXlKcU-27xEw5q0nQ0ozArdLYBFeO-B1g&usqp=CAU"  onClick={()=> history.push('/Tienda-comida')} class="card-img-top" alt="..."/>
+  <img height="200px" src=" https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRucNXlKcU-27xEw5q0nQ0ozArdLYBFeO-B1g&usqp=CAU"  onClick={()=> history.push('/Productos')} class="card-img-top" alt="..."/>
   
 
   

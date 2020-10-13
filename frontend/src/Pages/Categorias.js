@@ -1,12 +1,25 @@
-import React from "react";
+import React, {Component} from "react";
 import { withRouter } from "react-router-dom";
 
 import "./css/Categorias.css";
 import "../Components/popup.css";
 
 
-function Categorias(props) {
-  const { history } = props;
+class Categorias extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      termino : '',
+      imagenes: '',
+      pagina: ''
+    }
+  }
+
+
+  
+  render () {
+  const { history } = this.props;
 
   function pup() {
     var btnAbrirPopup = document.getElementById(`btn-abrir-popup`);
@@ -36,12 +49,12 @@ function Categorias(props) {
           <span className="navbar-toggler-icon" id="btn-abrir-popup" onClick={() =>
             pup(0)
           }></span>
-          <span>{" "}
+          <span className="SinStella">{" "}
           RECAPITO{" "}</span>
         </section>
         <section
           onClick={() => history.push('/Perfil')}
-          className="navbar-brand text-center border border-dark w-30 m-0">
+          className=" SinStella navbar-brand text-center border border-dark w-30 m-0">
           <figure className="d-inline m-0">
             <img className="rounded-circle" src={require('../images/perfil.PNG')} alt="" width="30 px" height="30 px" />
             <figcaption className="d-inline">ALGUIEN</figcaption>
@@ -57,7 +70,7 @@ function Categorias(props) {
             type="search"
             className="d-flex justify-content-center"
             placeholder="Busca algun producto"
-            onClick={() => history.push("/Tienda-comida")}
+            onClick={() => history.push("/Productos")}
             id="buscador"
           />
         </div>
@@ -82,7 +95,7 @@ function Categorias(props) {
         </div>
       </div>
     </div>
-  );
+  );}
 }
 
 export default withRouter(Categorias);

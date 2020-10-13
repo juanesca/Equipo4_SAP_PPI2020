@@ -8,13 +8,13 @@ function Header(props) {
   return (
     <div>
       <header className="navbar navbar-light bg-light shadow-sm">
-        <section className="navbar-brand border border-dark w-70 m-0 pl-3">
+        <section className="SinStella navbar-brand border border-dark w-70 m-0 pl-3">
           {" "}
           RECAPITO{" "}
         </section>
         <section 
         onClick={()=> history.push('/Perfil')}
-        className="navbar-brand text-center border border-dark w-30 m-0">
+        className="SinStella navbar-brand text-center border border-dark w-30 m-0">
           {" "}
           ALGUIEN{" "}
         </section>

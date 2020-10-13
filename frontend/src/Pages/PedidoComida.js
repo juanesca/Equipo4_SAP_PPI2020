@@ -2,15 +2,13 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from '../Components/Header';
 
-import '../Components/primercuad.css';
-
 
 function PedidoComidas(props) {
   const { history } = props;
 
   return (
     <div >
-      < Header />
+      <Header />
 
       <main>
       <p class="text-center">

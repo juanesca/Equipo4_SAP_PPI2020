@@ -10,5 +10,15 @@ export const dataProductoC = [
         ],
         costo : 19900
 
+    },
+    {
+        id : 2,
+        caract : [
+            '512 GB',
+            '10a Gen',
+            'Intel',
+            'Negro o azul',
+        ],
+        costo : 2100000
     }
 ]
