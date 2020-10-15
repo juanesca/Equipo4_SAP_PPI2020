@@ -34,21 +34,23 @@ function PedidoComidas(props) {
           </div>
         </div>
       </div>
-      <div className="cuadro">
-        <div className="align-text">
-          <h2>Datos del comprador</h2>
+      <div className="cuadro justify-content-center">
+        <div className="d-flex flex-column align-text">
+          <h2 className="d-flex">Datos del comprador</h2>
 
-          <div className="contenedor" />
-          <div className="input-contenedor" />
+          <div className="contenedor d-flex flex-column mx-auto">
+          <div className="input-contenedor my-1" >
           <input type="text" placeholder="Nombre:" />
-
-          <div className="input-contenedor" />
+</div>
+          <div className="input-contenedor my-1 d-flex" >
           <input type="text" placeholder="Telefono:" />
-
-          <div className="input-contenedor" />
+</div>
+          <div className="input-contenedor my-1 d-flex" >
           <input type="text" placeholder="Direccion:" />
+          </div>
+          </div>
         </div>
-        <button type="button" class="btn btn-dark" Finalizar compra onClick={() => history.push('/Fin-compra')} />
+        <button type="button" class="btn btn-dark mx-auto d-flex" onClick={() => history.push('/Fin-compra')} >Finalizar Compra</button>
       </div>
 
     </main>

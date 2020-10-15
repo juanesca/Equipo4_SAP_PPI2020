@@ -14,6 +14,7 @@
 body{
     margin: 0;
     font-family: Stella !important;
+    background:  linear-gradient(to left, rgba(104,206,247,1) 0%, rgba(104,206,247,1) 4%, rgba(212,144,147,1) 86%, rgba(212,144,147,1) 88%) !important;
 }
 
 @font-face{
