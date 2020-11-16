@@ -2,7 +2,7 @@ const { Router } = require("express");
 const router = Router();
 const mysqlConnection = require("../db/db");
 
-router.get("/user/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
   mysqlConnection.query(
     "SELECT * FROM usuario_registrado WHERE Id = ?",
@@ -17,7 +17,7 @@ router.get("/user/:id", (req, res) => {
   );
 });
 
-router.post("/usuario_registrado", (req, res) => {
+router.post("/signup", (req, res) => {
   const {
     direccion,
     telefono,
