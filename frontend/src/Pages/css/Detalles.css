@@ -1,0 +1,21 @@
+button.btn.btn-danger{
+    margin-right: 50px;
+}
+h2.d-flex{
+    text-align: center;
+}
+div.contenedor.d-flex.flex-column.mx-auto{
+    width:50px;
+
+}
+
+input{
+    width:200px;
+    height: 45px;
+  }
+
+/*div{
+    width:200px;
+    height: 100px;
+ }*/
+ 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from '../Components/Header';
+import'../Pages/css/font/Detalles.css';
+import'../Pages/css/Detalles.css';
 
 
 function PedidoComidas(props) {
