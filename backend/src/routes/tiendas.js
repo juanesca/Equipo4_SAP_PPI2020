@@ -1,11 +1,11 @@
 const { Router } = require("express");
 const router = Router();
-const mysqlConnection = require("../db/db");
+const mySQLconnection = require("../db/db");
 
 const { isLoggedIn } = require('../lib/auth');
 
 router.get("/", (req, res) => {
-  mysqlConnection.query("SELECT * FROM tienda", (err, rows, field) => {
+  mySQLconnection.query("SELECT * FROM tienda", (err, rows, field) => {
     if (!err) {
       res.json(rows);
     } else {
@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
 router.get("/:Categorias", (req, res) => {
   //const { Categoria } = req.body;
   const { Categorias } = req.params;
-  mysqlConnection.query(
+  mySQLconnection.query(
     "SELECT * FROM tienda WHERE Categorias = ?",
     [Categorias],
     (err, rows, field) => {
@@ -40,7 +40,7 @@ router.post("/add",isLoggedIn, (req, res) => {
     Cod_usuario: req.user.id,
   };
   if (req.user.tipo_usuario == 3){
-  mysqlConnection.query(
+  mySQLconnection.query(
     "INSERT INTO tienda(Direccion,Telefono,Categorias,nombre,Cod_usuario) VALUES(?,?,?,?,?) ",
     [newTienda]
   );
@@ -60,7 +60,7 @@ router.post('/edit/:id', isLoggedIn, (req,res) => {
     Cod_usuario: req.user.id 
   };
   if (req.user.tipo_usuario == 3){
-    mysqlConnection.query(
+    mySQLconnection.query(
       "UPDATE tienda(Direccion,Telefono,Categorias,nombre,Cod_usuario) VALUES(?,?,?,?,?) ",
       [newTienda]
     );

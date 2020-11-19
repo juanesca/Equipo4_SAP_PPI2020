@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const morgan = require('morgan');
 const session = require('express-session');
@@ -11,6 +12,10 @@ const {database} = require('./keys');
 // Initializations
 const app = express();
 require('./lib/passport');
+
+//Cors
+app.use(cors({origin: '*'}));
+//añadir link del front al terminar el back
 
 //Settings
 app.set('port', process.env.PORT || 4001);
