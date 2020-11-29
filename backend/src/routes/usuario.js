@@ -1,13 +1,15 @@
 const { Router } = require("express");
 const router = Router();
-const passport = require('passport');
-const mysqlConnection = require("../db/db");
 
-const { isLoggedIn, isNotLoggedIn} = require('../lib/auth');
+const passport = require("passport");
+const MySQLConnection = require("../db/db");
+const helpers = require("../lib/helpers");
 
-router.get("/:id",isLoggedIn , (req, res) => {
+const { isLoggedIn, isNotLoggedIn } = require("../lib/auth");
+
+router.get("/:id", /*isLoggedIn,*/ (req, res) => {
   const { id } = req.params;
-  mysqlConnection.query(
+  MySQLConnection.query(
     "SELECT * FROM usuario_registrado WHERE Id = ?",
     [id],
     (err, rows, field) => {
@@ -19,59 +21,39 @@ router.get("/:id",isLoggedIn , (req, res) => {
     }
   );
 });
-/*
-router.post("/signup", (req, res) => {
-  const { telefono, direccion, tipo_usuario, nombre_completo } = req.body;
 
-  let DATOS = [telefono, direccion, tipo_usuario, nombre_completo];
+router.post(
+  "/signup",
+  isNotLoggedIn,
+  passport.authenticate("local.signup")
+);
 
-  let queryDATOS =
-    "INSERT INTO usuario_registrado(Telefono, Direccion, tipo_usuario, nombre_completo) VALUES(?,?,?,?)";
-  mysqlconection.query(queryDATOS, DATOS, (err, results, fields) => {
-    if (err) {
-      console.error(err);
-    } else {
-      res.json({ message: "Se han actualizado los datos." });
-    }
-  });
-});
-*/
-router.post('/signup', isNotLoggedIn, passport.authenticate('local.signup', {
-  successRedirect: '/',
-  failureRedirect: '/signup',
-  failureFlash: true
-}));
-
-router.post('/signin', isNotLoggedIn, (req, res, next) => {
-
-  passport.authenticate('local.signin', {
-      successRedirect: '/',
-      failureRedirect: '/signin',
-      failureFlash: true
-  });(req, res, next);
+router.post("/signin", isNotLoggedIn, (req, res, next) => {
+  passport.authenticate("local.signin");
+  req, res, next;
 });
 
-router.get('/logout', isLoggedIn, (req, res) => {
+router.get("/logout", isLoggedIn, (req, res) => {
   req.logOut();
-  res.redirect('/');
-})
+});
 
-router.post("/extraInfo/:id",isLoggedIn, (req, res) => {
-  const {id} = req.params;
+router.post("/:id/extraInfo", isLoggedIn, (req, res) => {
+  const { id } = req.params;
   const { Foto_perfil, Cod_cupones, Favoritos, Mas_comprados } = req.body;
 
-  let DATOS = [Foto_perfil, Cod_cupones, Favoritos, Mas_comprados ];
+  let DATOS = [Foto_perfil, Cod_cupones, Favoritos, Mas_comprados];
 
-  mysqlconection.query("UPDATE usuario_registrado set WHERE id=? ", [DATOS, id], (err, results, fields) => {
-    if (err) {
-      console.error(err);
-    } else {
-      res.json({ message: "Se han actualizado los datos." });
+  MySQLConnection.query(
+    "UPDATE usuario_registrado set ? WHERE id = ? ",
+    [DATOS, id],
+    (err, results, fields) => {
+      if (err) {
+        console.error(err);
+      } else {
+        res.json({ message: "Se han actualizado los datos." });
+      }
     }
-  });
+  );
 });
-
-
-
 
 module.exports = router;

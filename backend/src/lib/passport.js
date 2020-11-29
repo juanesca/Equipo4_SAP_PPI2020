@@ -1,8 +1,7 @@
 const passport = require("passport");
-const mysqlConnection = require("../db/db");
 const LocalStrategy = require("passport-local").Strategy;
 
-const MySQLconnection = require("../db/db");
+const MySQLConnection = require("../db/db");
 const helpers = require("../lib/helpers");
 
 passport.use(
@@ -14,15 +13,15 @@ passport.use(
       passReqToCallback: true,
     },
     async (req, username, password, done) => {
-      await MySQLconnection.query(
-        "SELECT * FROM usuario_registrado WHERE nombre_completo = ?",
+      await MySQLConnection.query(
+        "SELECT * FROM usuario_registrado WHERE username = ?",
         [username]
       );
       if (rows.length > 0) {
         const user = rows[0];
         const validPassword = await helpers.matchPassword(
           password,
-          user.contraseña
+          user.password
         );
         if (validPassword) {
           done(
@@ -40,37 +39,62 @@ passport.use(
   )
 );
 
-
 passport.use(
-    'local.signup',
-    new LocalStrategy({
-        usernameField: 'username',
-        passwordField: 'password',
-        passReqToCallback: true
+  "local.signup",
+  new LocalStrategy(
+    {
+      usernameField: "username",
+      passwordField: "password",
+      passReqToCallback: true,
     },
-    async (req, username, password, done) => {
-        const {Foto_perfil,Telefono,Direccion,tipo_usuario} = req.body;
-        const newUser = {
-            username,
-            password,
-            Foto_perfil,
-            Telefono,
-            Direccion,
-            tipo_usuario
-        };
-        newUser.password = await helpers.encryptPassword(password);
-        const result = await MySQLconnection.query('INSERT INTO usuario_registrado(username,password,Foto_perfil,Telefono,Direccion,tipo_usuario) VALUES(?,?,?,?,?,?)',[newUser]);
-        newUser.id = result.insertId;
-        return done(null, newUser);
-    })
+    async (req, res, username, password, done) => {
+      const { Telefono, Direccion, tipo_usuario } = req.body;
+      let newUser = {
+        username,
+        password,
+        tipo_usuario,
+        Telefono,
+        Direccion,
+      };
+      newUser.password = await helpers.encryptPassword(password);
+      const result = await MySQLConnection.query(
+        "INSERT INTO usuario_registrado(username,password,tipo_usuario,Telefono,Direccion) VALUES(?,?,?,?,?)",
+        [newUser],
+        (err, results, fields) => {
+          if (err) {
+            console.error(err);
+          } else {
+            res.json({ message: `Bienvenid@ ${newUser.username}` });
+          }
+        }
+      );
+      newUser.id = result.insertId;
+      return done(null, newUser);
+      /*const result = await MySQLconnection.query(
+        "INSERT INTO usuario_registrado(username,password,Telefono,tipo_usuario,Direccion) VALUES(?,?,?,?,?)",
+        [newUser],
+        (err, results, fields) => {
+          if (err) {
+            console.error(err);
+          } else {
+            res.json({ message: `Bienvenid@ ${newUser.username}` });
+          }
+        }
+      );
+      newUser.id = result.insertId;
+      return done(null, newUser);*/
+    }
+  )
 );
 
-passport.serializeUser((user,done)=>{
-    done(null, user.id);
+passport.serializeUser((user, done) => {
+  done(null, user.id);
 });
 
-passport.deserializeUser(async (id,done)=>{
-    const rows = await MySQLconnection.query('SELECT * FROM usuario_registrado WHERE id = ?', [id]);
-    done(null, rows);
+passport.deserializeUser(async (id, done) => {
+  const rows = await MySQLConnection.query(
+    "SELECT * FROM usuario_registrado WHERE id = ?",
+    [id]
+  );
+  done(null, rows);
 });
-
