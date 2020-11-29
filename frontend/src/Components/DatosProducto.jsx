@@ -1,8 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import Header from '../Components/Header';
-import '../Pages/css/font/Detalles.css';
-import '../Pages/css/Detalles.css';
+
+import './css/Detalles.css';
+
 function DatosProducto(props) {
     const { history } = props;
     return (
@@ -12,9 +13,9 @@ function DatosProducto(props) {
                 <div className="card text-dark bg-light mb-3 container-fluid">
                     <div className="card-header">CARACTERÍSTICAS</div>
                     <div className="card-body">
-                        <div className="d-flex">
-                            <p className="mr-auto"> - 8 partes</p>
-                            <button type="button" className="btn btn-danger" onClick={()=> history.push('/PedidoComida')} >
+                        <div className="row justify-content-end">
+                            <p className="col-4"> - 8 partes</p>
+                            <button type="button" className="btn btn-danger col-4" onClick={()=> history.push('/PedidoComida')} >
                                 HAZ TU PEDIDO
                         </button>
                         </div>

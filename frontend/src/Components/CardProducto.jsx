@@ -8,7 +8,7 @@ function imagenes(props) {
     const {src, path} = props.imagen;
 
     return (
-        <div className="row row-cols-1 row-cols-md-3 row-cols-md-2">
+        <div>
             <div className="col mb-4">
                 <div className="card h-100 ">
                     <img height="100px" width="15px" src={src} className="card-img-top img-fluid" alt="..." display="inline" background-color="red" />
