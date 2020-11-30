@@ -63,19 +63,6 @@ class Categorias extends Component {
       </header>
 
 
-      <div>
-
-        <div className="d-flex justify-content-center">
-          <input
-            type="search"
-            className="d-flex justify-content-center"
-            placeholder="Busca algun producto"
-            onClick={() => history.push("/Productos")}
-            id="buscador"
-          />
-        </div>
-      </div>
-
       <div className="overlay" id="overlay">
         <div className="popup mx-4" id="popup">
           <i className="btn-cerrar-popup" id="btn-cerrar-popup" aria-label="close" role="button">&times;</i>
