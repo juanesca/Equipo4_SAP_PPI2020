@@ -8,11 +8,11 @@ const passport = require("passport");
 const flash = require("connect-flash");
 const bodyParser = require("body-parser");
 
-const { database } = require("./keys");
+const { database } = require("./src/keys");
 
 // Initializations
 const app = express();
-require("./lib/passport");
+require("./src/lib/passport");
 
 //Cors
 app.use(cors({ origin: "*" }));
@@ -46,8 +46,8 @@ app.use((req, res, next) => {
 });
 
 //Routes
-app.use("/user", require("./routes/usuario"));
-app.use("/tiendas", require("./routes/tiendas"));
+app.use("/user", require("./src/routes/usuario"));
+app.use("/tiendas", require("./src/routes/tiendas"));
 
 //Starting the server
 app.listen(app.get("port"), () => {

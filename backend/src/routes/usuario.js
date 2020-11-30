@@ -5,9 +5,7 @@ const passport = require("passport");
 const MySQLConnection = require("../db/db");
 const helpers = require("../lib/helpers");
 
-const { isLoggedIn, isNotLoggedIn } = require("../lib/auth");
-
-router.get("/:id", /*isLoggedIn,*/ (req, res) => {
+router.get("/:id", (req, res) => {
   const { id } = req.params;
   MySQLConnection.query(
     "SELECT * FROM usuario_registrado WHERE Id = ?",
@@ -23,21 +21,62 @@ router.get("/:id", /*isLoggedIn,*/ (req, res) => {
 });
 
 router.post(
-  "/signup",
-  isNotLoggedIn,
-  passport.authenticate("local.signup")
+  "/signin",
+
+  async (req, username, password, done) => {
+    await MySQLConnection.query(
+      "SELECT * FROM usuario_registrado WHERE username = ?",
+      [username]
+    );
+    if (rows.length > 0) {
+      const user = rows[0];
+      const validPassword = await helpers.matchPassword(
+        password,
+        user.password
+      );
+      if (validPassword) {
+        done(
+          null,
+          user
+        );
+      } else {
+        done(null, false);
+      }
+    } else {
+      return done(null, false);
+    }
+  }
 );
 
-router.post("/signin", isNotLoggedIn, (req, res, next) => {
-  passport.authenticate("local.signin");
-  req, res, next;
+router.post("/signup", (req, res, next) => {
+  const { Telefono, Direccion, tipo_usuario, username, password } = req.body;
+      let newUser = {
+        username,
+        password,
+        tipo_usuario,
+        Telefono,
+        Direccion,
+      };
+      newUser.password = await helpers.encryptPassword(password);
+      const result = await MySQLConnection.query(
+        "INSERT INTO usuario_registrado(username,password,tipo_usuario,Telefono,Direccion) VALUES(?,?,?,?,?)",
+        [newUser],
+        (err, results, fields) => {
+          if (err) {
+            console.error(err);
+          } else {
+            res.json({ message: `Bienvenid@ ${newUser.username}` });
+          }
+        }
+      );
+      newUser.id = result.insertId;
 });
 
-router.get("/logout", isLoggedIn, (req, res) => {
+router.get("/logout", (req, res) => {
   req.logOut();
 });
 
-router.post("/:id/extraInfo", isLoggedIn, (req, res) => {
+router.post("/:id/extraInfo", (req, res) => {
   const { id } = req.params;
   const { Foto_perfil, Cod_cupones, Favoritos, Mas_comprados } = req.body;
 

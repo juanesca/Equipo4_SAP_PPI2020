@@ -1,8 +1,5 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
- 
-import Header from '../Components/Header';
-import'../Pages/css/Detalles.css';
 
 import Header from '../Components/Header2';
 
