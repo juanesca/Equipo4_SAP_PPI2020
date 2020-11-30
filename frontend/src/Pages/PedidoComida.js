@@ -9,7 +9,6 @@ import Header from '../Components/Header2';
 import'../Components/css/Detalles.css';
 
 
-
 function PedidoComidas(props) {
   const { history } = props;
 
