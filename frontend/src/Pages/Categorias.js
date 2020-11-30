@@ -12,13 +12,16 @@ class Categorias extends Component {
     this.state = {
       termino : '',
       imagenes: '',
-      pagina: ''
+      pagina: '',
+      user: false
     }
   }
 
 
   
   render () {
+  var isLog = this.state.user;
+  
   const { history } = this.props;
 
   function pup() {
@@ -42,6 +45,14 @@ class Categorias extends Component {
     }
   }
 
+  function user(){
+    if (isLog === true){
+      history.push('/Perfil');
+    } else{
+      history.push('/Login');
+    }
+  }
+
   return (
     <div id="contenedor" className="container-fluid">
       <header className="navbar navbar-light bg-light shadow-sm container-fluid">
@@ -53,7 +64,7 @@ class Categorias extends Component {
           RECAPITO{" "}</span>
         </section>
         <section
-          onClick={() => history.push('/Perfil')}
+          onClick={() => user()}
           className=" SinStella navbar-brand text-center border border-dark w-30 m-0">
           <figure className="d-inline m-0">
             <img className="rounded-circle" src={require('../images/perfil.PNG')} alt="" width="30 px" height="30 px" />

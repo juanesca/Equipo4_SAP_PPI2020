@@ -12,6 +12,7 @@ function pagina1(props) {
   return (
     <div className="container-fluid">
       <Header />
+      <div className="d-flex flex-wrap align-content-around justify-content-center">
       {
         data.map(imagen=>(
           <Card
@@ -20,7 +21,7 @@ function pagina1(props) {
           />
         ))
       }
-      
+      </div>
     </div>
   );
 }

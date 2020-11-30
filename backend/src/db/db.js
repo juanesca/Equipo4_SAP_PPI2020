@@ -1,14 +1,21 @@
 const mysql = require("mysql");
 
-const mysqlConnection = mysql.createConnection({
+const MySQLConnection = mysql.createConnection({
+  /*
   host: "bghkvgdcwrzp4hrgmdg0-mysql.services.clever-cloud.com",
   user: "uvswjbyhatviorp7",
   password: "45uXNHuMIEJVG7HiR29c",
   database: "bghkvgdcwrzp4hrgmdg0",
   multipleStatements: true
+  */
+ host: 'localhost',
+ user: 'root',
+ password: '1001470357',
+ database: 'recapito',
+ multipleStatements: true
 });
 
-mysqlConnection.connect((error) => {
+MySQLConnection.connect((error) => {
   if (error) {
     console.error(error);
     return;
@@ -17,4 +24,4 @@ mysqlConnection.connect((error) => {
   }
 });
 
-module.exports = mysqlConnection;
+module.exports = MySQLConnection;

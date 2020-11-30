@@ -14,7 +14,7 @@ function Inicio(props) {
           alt="logo recapito"
           src={require('../images/RecapitoLogo.png')}
           className="d-flex justify-content-center w-50 mx-auto"
-          onClick={() => history.push('/Login')}
+          onClick={() => history.push('/Categorias')}
 
         ></img>
       </figure>

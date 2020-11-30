@@ -1,7 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+ 
 import Header from '../Components/Header';
 import'../Pages/css/Detalles.css';
+
+import Header from '../Components/Header2';
+
+import'../Components/css/Detalles.css';
+
 
 
 function PedidoComidas(props) {
